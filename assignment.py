@@ -36,6 +36,8 @@ def getInputs(questions):
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
+    #prompts = float(prompts)
+    #prompts(0,-1) =
     measurements
     
     return measurements
