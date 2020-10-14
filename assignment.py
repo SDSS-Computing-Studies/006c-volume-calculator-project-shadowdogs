@@ -26,9 +26,27 @@ def getParams(shape):
     # input parameter: string 
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-    prompts
+    if shape == "Cube":
+        # volume = sidelength**3
+        paramList = ["Enter a side length: "]
 
-    return prompts
+    elif shape == "Sphere":
+        # volume = (4 / 3) * math.pi * (radius**3)
+        paramList = ["Enter radius: "]
+
+    elif shape == "Cone":
+        # volume = math.pi * (radius**2) * (height / 3)
+        paramList = ["Enter radius: ", "Enter height: "]
+
+    elif shape == "Pyramid":
+        # volume = (length * width * height) / 3
+        paramList = ["Enter base length: ", "Enter base width: ", "Enter height: "]
+
+    elif shape == "Cylinder":
+        # volume = math.pi * (radius**2) * height
+        paramList = ["Enter radius: ", "Enter height: "]
+
+    return paramList
 
 def getInputs(questions):
     # Will prompt the user for inputs for the shape they.
