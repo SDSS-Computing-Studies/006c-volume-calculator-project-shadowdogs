@@ -70,7 +70,7 @@ def getParams(shape):
     return paramList
 
 
-def getInputs(questions):
+def getInputs(paramList):
     # Will prompt the user for inputs for the shape they.
     # These will be asked so that the user can enter in appropriate values
     # It will turn all the input data into a list
@@ -79,6 +79,11 @@ def getInputs(questions):
     # Author:
     # Modified:
     return None
+    measurements = []
+    for i in paramList:
+        measurements.append(input(i))
+
+    return measurements
 
 
 def main():
@@ -90,5 +95,5 @@ def main():
     title()
     instructions()
 
-
-main()
+getParams()
+getInputs()
