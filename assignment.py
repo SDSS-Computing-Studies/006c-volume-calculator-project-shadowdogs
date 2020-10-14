@@ -43,15 +43,11 @@ def getParams(shape):
     # input parameter: string
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-<<<<<<< Updated upstream
+    # Author:
+    # Modified:
     if shape == "Cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
-=======
-    # Author:
-    # Modified:
-    prompts
->>>>>>> Stashed changes
 
     elif shape == "Sphere":
         # volume = (4 / 3) * math.pi * (radius**3)
@@ -63,7 +59,8 @@ def getParams(shape):
 
     elif shape == "Pyramid":
         # volume = (length * width * height) / 3
-        paramList = ["Enter base length: ", "Enter base width: ", "Enter height: "]
+        paramList = ["Enter base length: ",
+                     "Enter base width: ", "Enter height: "]
 
     elif shape == "Cylinder":
         # volume = math.pi * (radius**2) * height
