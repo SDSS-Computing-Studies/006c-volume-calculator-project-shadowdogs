@@ -49,24 +49,24 @@ def getParams(shape):
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: David
     # Modified:
-    if shape == "Cube":
+    if shape == "Cube" or "cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
 
-    elif shape == "Sphere":
+    elif shape == "Sphere" or "sphere":
         # volume = (4 / 3) * math.pi * (radius**3)
         paramList = ["Enter radius: "]
 
-    elif shape == "Cone":
+    elif shape == "Cone" or "cone":
         # volume = math.pi * (radius**2) * (height / 3)
         paramList = ["Enter radius: ", "Enter height: "]
 
-    elif shape == "Pyramid":
+    elif shape == "Pyramid" or "pyramid":
         # volume = (length * width * height) / 3
         paramList = ["Enter base length: ",
                      "Enter base width: ", "Enter height: "]
 
-    elif shape == "Cylinder":
+    elif shape == "Cylinder" or "pyramid":
         # volume = math.pi * (radius**2) * height
         paramList = ["Enter radius: ", "Enter height: "]
 
@@ -89,33 +89,33 @@ def getInputs(paramList):
 
 
 def calculate(shape, inputList):
-    if shape == "Cube":
+    if shape == "Cube" or "cube":
         # volume = sidelength**3
         x = int(inputList[0])
         answer = x ** 3
 
-    elif shape == "Sphere":
+    elif shape == "Sphere" or "sphere":
         # volume = (4 / 3) * math.pi * (radius**3)
-        x = inputList[0]
+        x = int(inputList[0])
         answer = (4 / 3) * math.pi * (x ** 3)
 
-    elif shape == "Cone":
+    elif shape == "Cone" or "cone":
         # volume = math.pi * (radius**2) * (height / 3)
-        x = inputList[0]
-        y = inputList[1]
+        x = int(inputList[0])
+        y = int(inputList[1])
         answer = math.pi * (x ** 2) * (y / 3)
 
-    elif shape == "Pyramid":
+    elif shape == "Pyramid" or "pyramid":
         # volume = (length * width * height) / 3)
-        x = inputList[0]
-        y = inputList[1]
-        z = inputList[2]
+        x = int(inputList[0])
+        y = int(inputList[1])
+        z = int(inputList[2])
         answer = (x * y * z) / 3
 
-    elif shape == "Cylinder":
+    elif shape == "Cylinder" or "cylinder":
         # volume = math.pi * (radius**2) * height
-        x = inputList[0]
-        y = inputList[1]
+        x = int(inputList[0])
+        y = int(inputList[1])
         answer = math.pi * (x ** 2) * y
     return answer
 
