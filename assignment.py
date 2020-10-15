@@ -12,11 +12,11 @@ def title():
     # Modified:
     print("""
     ==========Welcome To ShadowDogsUnleashed Calculator==========
-    Cube
-    Sphere
-    Cone
-    Cylinder
-    Pyramid
+                            Cube
+                            Sphere
+                            Cone
+                            Cylinder
+                            Pyramid
     =============================================================
     """)
 
@@ -50,7 +50,7 @@ def getParams(shape):
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: David
-    # Modified: Sam
+    # Modified: Sam, Jhune Franci
     if shape.casefold() == "cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
@@ -72,7 +72,11 @@ def getParams(shape):
         # volume = math.pi * (radius**2) * height
         paramList = ["Enter radius: ", "Enter height: "]
 
-    return paramList
+    else:
+        print("That shape doesnt exist")
+        main()
+
+        return paramList
 
 
 def getInputs(paramList):
@@ -96,31 +100,31 @@ def calculate(shape, inputList):
     # shape is a string
     if shape.casefold() == "cube":
         # volume = sidelength**3
-        x = int(inputList[0])
+        x = float(inputList[0])
         answer = x ** 3
 
     elif shape.casefold() == "sphere":
         # volume = (4 / 3) * math.pi * (radius**3)
-        x = int(inputList[0])
+        x = float(inputList[0])
         answer = (4 / 3) * math.pi * (x ** 3)
 
     elif shape.casefold() == "cone":
         # volume = math.pi * (radius**2) * (height / 3)
-        x = int(inputList[0])
-        y = int(inputList[1])
+        x = float(inputList[0])
+        y = float(inputList[1])
         answer = math.pi * (x ** 2) * (y / 3)
 
     elif shape.casefold() == "pyramid":
         # volume = (length * width * height) / 3)
-        x = int(inputList[0])
-        y = int(inputList[1])
-        z = int(inputList[2])
+        x = float(inputList[0])
+        y = float(inputList[1])
+        z = float(inputList[2])
         answer = (x * y * z) / 3
 
     elif shape.casefold() == "cylinder":
         # volume = math.pi * (radius**2) * height
-        x = int(inputList[0])
-        y = int(inputList[1])
+        x = float(inputList[0])
+        y = float(inputList[1])
         answer = math.pi * (x ** 2) * y
     return answer
 
