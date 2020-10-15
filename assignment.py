@@ -18,7 +18,6 @@ def title():
     Pyramid
     =============================================================
     """)
-    return None
 
 
 def instructions():
@@ -31,14 +30,9 @@ def instructions():
     ==========Instructions==========
     Choose a shape 
     Enter the value of the shape that you chose
+
     ================================
     """)
-
-    return None
-
-def getShape():
-    shape = input("Enter your shape: ")
-    return shape
 
 
 def getParams(shape):
@@ -49,7 +43,6 @@ def getParams(shape):
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: David
     # Modified:
-
     pass
     if shape == "Cube":
         # volume = sidelength**3
@@ -81,9 +74,9 @@ def getInputs(paramList):
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
-    # Author:
+    # Author: Sam
     # Modified:
-    return None
+
     measurements = []
     for i in paramList:
         measurements.append(input(i))
@@ -100,5 +93,7 @@ def main():
     title()
     instructions()
 
+
 getParams()
 getInputs()
+main()
