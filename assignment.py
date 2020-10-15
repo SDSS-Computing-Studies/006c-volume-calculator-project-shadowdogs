@@ -115,8 +115,9 @@ def calculate(shape, inputList):
         x = inputList[0]
         y = inputList[1]
         answer = math.pi * (x ** 2) * y
-
     return answer
+
+    
 
 
 def main(answer):
