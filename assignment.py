@@ -1,7 +1,7 @@
 #!python3
 # Volume Calculator
 # Feel free to rename your variables
-
+import math
 
 def title():
     # Will display a title screen
@@ -18,7 +18,6 @@ def title():
     Pyramid
     =============================================================
     """)
-    return None
 
 
 def instructions():
@@ -34,7 +33,6 @@ def instructions():
     ================================
     """)
 
-    return None
 
 def getShape():
     shape = input("Enter your shape: ")
@@ -50,7 +48,6 @@ def getParams(shape):
     # Author: David
     # Modified:
 
-    pass
     if shape == "Cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
@@ -83,12 +80,36 @@ def getInputs(paramList):
     # output parameter: return a list containing all the measurements of the shape
     # Author:
     # Modified:
-    return None
     measurements = []
     for i in paramList:
         measurements.append(input(i))
 
     return measurements
+
+def calculate(shape, inputList):
+    if shape == "Cube":
+        # volume = sidelength**3
+        x = inputList[0]
+        answer = x ** 3
+
+    elif shape == "Sphere":
+        # volume = (4 / 3) * math.pi * (radius**3)
+        x = inputList[0] 
+
+    elif shape == "Cone":
+        # volume = math.pi * (radius**2) * (height / 3)
+        x = inputList[0]
+
+
+    elif shape == "Pyramid":
+        # volume = (length * width * height) / 3)
+        x = inputList[0]
+
+    elif shape == "Cylinder":
+        # volume = math.pi * (radius**2) * height
+        x = inputList[0]
+
+    return answer
 
 
 def main():
@@ -97,8 +118,17 @@ def main():
     # the user chooses to exit
     # Author:
     # Modified:
-    title()
-    instructions()
+    x = ""
+    while x != "exit":
+        title()
+        instructions()
+        getShape()
+        getParams()
+        getInput()
+        calculate()
+        x = input("Type 'exit' to stop program")
 
-getParams()
-getInputs()
+main()
+
+
+
