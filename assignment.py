@@ -76,7 +76,7 @@ def getParams(shape):
         print("That shape doesnt exist")
         main()
 
-        return paramList
+    return paramList
 
 
 def getInputs(paramList):
@@ -136,8 +136,6 @@ def main():
     # Author: David
     # Modified:
     x = ""
-    title()
-    instructions()
     while x != "exit":
         nshape = getShape()
         nlist = getParams(nshape)
@@ -148,4 +146,6 @@ def main():
         x = input("Type 'exit' to stop program ")
 
 
+title()
+instructions()
 main()
