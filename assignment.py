@@ -3,6 +3,7 @@
 # Feel free to rename your variables
 import math
 
+
 def title():
     # Will display a title screen
     # input parameters: none needed
@@ -86,10 +87,11 @@ def getInputs(paramList):
 
     return measurements
 
+
 def calculate(shape, inputList):
     if shape == "Cube":
         # volume = sidelength**3
-        x = inputList[0]
+        x = int(inputList[0])
         answer = x ** 3
 
     elif shape == "Sphere":
@@ -127,17 +129,16 @@ def main(answer):
     # Author:
     # Modified:
     x = ""
+    title()
+    instructions()
     while x != "exit":
-        title()
-        instructions()
-        getShape()
-        getParams()
-        getInput()
-        calculate()
-        print(answer)
-        x = input("Type 'exit' to stop program: ")
+        nshape = getShape()
+        nlist = getParams(nshape)
+        ninputs = getInputs(nlist)
+        answer = calculate(nshape, ninputs)
+        print("The volume of the " + nshape + " is " + str(answer))
+
+        x = input("Type 'exit' to stop program ")
+
 
 main()
-
-
-
