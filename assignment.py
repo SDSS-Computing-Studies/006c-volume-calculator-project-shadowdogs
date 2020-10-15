@@ -31,7 +31,7 @@ def instructions():
     ==========Instructions==========
     Choose a shape 
     Enter the value of the shape that you chose
-
+    type "exit" to close the program
     ================================
     """)
 
@@ -97,23 +97,31 @@ def calculate(shape, inputList):
     elif shape == "Sphere":
         # volume = (4 / 3) * math.pi * (radius**3)
         x = inputList[0]
+        answer = (4 / 3) * math.pi * (x ** 3)
 
     elif shape == "Cone":
         # volume = math.pi * (radius**2) * (height / 3)
         x = inputList[0]
+        y = inputList[1]
+        answer = math.pi * (x ** 2) * (y / 3)
 
     elif shape == "Pyramid":
         # volume = (length * width * height) / 3)
         x = inputList[0]
+        y = inputList[1]
+        z = inputList[2]
+        answer = (x * y * z) / 3
 
     elif shape == "Cylinder":
         # volume = math.pi * (radius**2) * height
         x = inputList[0]
+        y = inputList[1]
+        answer = math.pi * (x ** 2) * y
 
     return answer
 
 
-def main():
+def main(answer):
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
