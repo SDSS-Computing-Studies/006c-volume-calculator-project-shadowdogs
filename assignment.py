@@ -49,7 +49,7 @@ def getParams(shape):
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: David
     # Modified:
-    if shape.casefold() ==  "cube":
+    if shape.casefold() == "cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
 
@@ -63,7 +63,8 @@ def getParams(shape):
 
     elif shape.casefold() == "pyramid":
         # volume = (length * width * height) / 3
-        paramList = ["Enter base length: ","Enter base width: ", "Enter height: "]
+        paramList = ["Enter base length: ",
+                     "Enter base width: ", "Enter height: "]
 
     elif shape.casefold() == "pyramid":
         # volume = math.pi * (radius**2) * height
@@ -88,7 +89,7 @@ def getInputs(paramList):
 
 
 def calculate(shape, inputList):
-    #shape is a string
+    # shape is a string
     if shape.casefold() == "cube":
         # volume = sidelength**3
         x = int(inputList[0])
@@ -118,8 +119,6 @@ def calculate(shape, inputList):
         y = int(inputList[1])
         answer = math.pi * (x ** 2) * y
     return answer
-
-    
 
 
 def main():
