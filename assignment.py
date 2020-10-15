@@ -63,8 +63,7 @@ def getParams(shape):
 
     elif shape == "Pyramid" or "pyramid":
         # volume = (length * width * height) / 3
-        paramList = ["Enter base length: ",
-                     "Enter base width: ", "Enter height: "]
+        paramList = ["Enter base length: ","Enter base width: ", "Enter height: "]
 
     elif shape == "Cylinder" or "pyramid":
         # volume = math.pi * (radius**2) * height
@@ -89,30 +88,31 @@ def getInputs(paramList):
 
 
 def calculate(shape, inputList):
-    if shape == "Cube" or "cube":
+    #shape is a string
+    if shape.casefold() == "cube":
         # volume = sidelength**3
         x = int(inputList[0])
         answer = x ** 3
 
-    elif shape == "Sphere" or "sphere":
+    elif shape.casefold() == "sphere":
         # volume = (4 / 3) * math.pi * (radius**3)
         x = int(inputList[0])
         answer = (4 / 3) * math.pi * (x ** 3)
 
-    elif shape == "Cone" or "cone":
+    elif shape.casefold() == "cone":
         # volume = math.pi * (radius**2) * (height / 3)
         x = int(inputList[0])
         y = int(inputList[1])
         answer = math.pi * (x ** 2) * (y / 3)
 
-    elif shape == "Pyramid" or "pyramid":
+    elif shape.casefold() == "pyramid":
         # volume = (length * width * height) / 3)
         x = int(inputList[0])
         y = int(inputList[1])
         z = int(inputList[2])
         answer = (x * y * z) / 3
 
-    elif shape == "Cylinder" or "cylinder":
+    elif shape.casefold() == "cylinder":
         # volume = math.pi * (radius**2) * height
         x = int(inputList[0])
         y = int(inputList[1])
