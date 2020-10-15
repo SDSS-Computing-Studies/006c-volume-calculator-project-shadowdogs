@@ -37,6 +37,8 @@ def instructions():
 
 
 def getShape():
+    # Author: Sam
+    # Modified:
     shape = input("Enter your shape: ")
     return shape
 
@@ -48,7 +50,7 @@ def getParams(shape):
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: David
-    # Modified:
+    # Modified: Sam
     if shape.casefold() == "cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
@@ -89,6 +91,8 @@ def getInputs(paramList):
 
 
 def calculate(shape, inputList):
+    # Author: Sam
+    # Modified: David
     # shape is a string
     if shape.casefold() == "cube":
         # volume = sidelength**3
@@ -125,7 +129,7 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    # Author:
+    # Author: David
     # Modified:
     x = ""
     title()
