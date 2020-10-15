@@ -73,7 +73,7 @@ def getParams(shape):
         paramList = ["Enter radius: ", "Enter height: "]
 
     else:
-        print("That shape doesnt exist")
+        print("That shape doesn't work")
         main()
 
     return paramList
