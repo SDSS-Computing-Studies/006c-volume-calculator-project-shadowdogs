@@ -30,7 +30,7 @@ def instructions():
     ==========Instructions==========
     Choose a shape 
     Enter the value of the shape that you chose
-
+    type "exit" to close the program
     ================================
     """)
 
