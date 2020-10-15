@@ -10,13 +10,13 @@ def title():
     # Author: Jhune Francis
     # Modified:
     print("""
-    ----------Welcome To ShadowDogsUnleashed Calculator----------
+    ==========Welcome To ShadowDogsUnleashed Calculator==========
     Cube
     Sphere
     Cone
     Cylinder
-    Pyramid 
-    -------------------------------------------------------------
+    Pyramid
+    =============================================================
     """)
     return None
 
@@ -25,13 +25,13 @@ def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Jhune Francis
     # Modified:
     print("""
-    ----------Instructions----------
-    Choose a shape listed above
-    Enter value of the shape that you chose
-
+    ==========Instructions==========
+    Choose a shape 
+    Enter the value of the shape that you chose
+    ================================
     """)
 
     return None
@@ -47,9 +47,10 @@ def getParams(shape):
     # input parameter: string
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-    # Author:
+    # Author: David
     # Modified:
 
+    pass
     if shape == "Cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
@@ -82,6 +83,7 @@ def getInputs(paramList):
     # output parameter: return a list containing all the measurements of the shape
     # Author:
     # Modified:
+    return None
     measurements = []
     for i in paramList:
         measurements.append(input(i))
@@ -96,6 +98,7 @@ def main():
     # Author:
     # Modified:
     title()
+    instructions()
 
 getParams()
 getInputs()
