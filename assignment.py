@@ -36,6 +36,10 @@ def instructions():
 
     return None
 
+def getShape():
+    shape = input("Enter your shape: ")
+    return shape
+
 
 def getParams(shape):
     # Will create a list of questions to be asked depending on the shape.
@@ -45,6 +49,7 @@ def getParams(shape):
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author:
     # Modified:
+
     if shape == "Cube":
         # volume = sidelength**3
         paramList = ["Enter a side length: "]
