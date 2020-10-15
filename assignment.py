@@ -65,7 +65,7 @@ def getParams(shape):
         # volume = (length * width * height) / 3
         paramList = ["Enter base length: ","Enter base width: ", "Enter height: "]
 
-    elif shape.casefold() == "pyramid":
+    elif shape.casefold() == "cylinder":
         # volume = math.pi * (radius**2) * height
         paramList = ["Enter radius: ", "Enter height: "]
 
